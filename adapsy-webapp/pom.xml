@@ -4,7 +4,7 @@
 	<groupId>com.adapsy</groupId>
 	<artifactId>adapsy-webapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Adapsy</name>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
