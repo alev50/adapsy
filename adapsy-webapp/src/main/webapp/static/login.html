@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta content="ie=edge" http-equiv="x-ua-compatible" />
+<title>Sign in | Adthruster</title>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
+<link
+	href="https://fonts.googleapis.com/css?family=Muli:400,300|Noto+Sans:400,700"
+	rel="stylesheet" type="text/css" />
+<script>
+	window.adtruster = {
+		mounted_on : '/_app'
+	}
+</script>
+<script src="js/login.js"></script>
+<link rel="stylesheet" media="screen" href="css/screen.css" />
+<meta name="param" content="authenticity_token" />
+<meta name="token" content="AdSales Managment" />
+</head>
+<body class="sessions new ">
+	<div class="public-background">
+		<div class="public-container">
+			<div class="public-wrapper">
+				<a class="brand-logo" href="/_app/"><img
+					src="images/logo-v2.png" alt="Logo white" /></a>
+				<div class="public-box">
+					<div class="public-intro">
+						<h3>Log in to your account</h3>
+					</div>
+					<form class="simple_form new_adtruster_account"
+						id="new_adtruster_account"
+						data-blank-required-fields-message="You haven&#39;t filled all the required inputs."
+						action="/_app/sign_in" accept-charset="UTF-8" method="post" action="j_spring_security_check">
+						<input name="utf8" type="hidden" value="&#x2713;" /><input
+							type="hidden" name="authenticity_token" value="#" /><input
+							value="true" type="hidden" name="adtruster_account[remember_me]"
+							id="adtruster_account_remember_me" />
+						<fieldset class="inputs">
+							<legend>
+								<span></span>
+							</legend>
+							<div
+								class="form-group input email optional adtruster_adtruster_account_email">
+								<label class="email optional control-label"
+									for="adtruster_account_email">Email</label><span
+									class="form-wrapper"><input tabindex="1"
+									class="string email optional form-control" type="email"
+									value="" name="adtruster_account[email]"
+									id="adtruster_account_email" /></span>
+							</div>
+							<div
+								class="form-group input password optional adtruster_adtruster_account_password">
+								<label class="password optional control-label"
+									for="adtruster_account_password">Password</label><span
+									class="help-inline"><a href="/_app/password/new">Forgot
+										my password</a></span><span class="form-wrapper"><input
+									tabindex="2" class="password optional form-control"
+									maxlength="128" size="128" type="password"
+									name="adthruster_account[password]"
+									id="adtruster_account_password" /></span>
+							</div>
+						</fieldset>
+						<div class="text-right form-actions">
+							<input type="submit" name="commit" value="Log in"
+								class="button btn btn-primary" />
+						</div>
+					</form>
+				</div>
+				<a class="public-link" href="/_app/sign_up">Do not have an
+					account?</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

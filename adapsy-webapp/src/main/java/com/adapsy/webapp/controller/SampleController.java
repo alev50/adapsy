@@ -1,6 +1,9 @@
 package com.adapsy.webapp.controller;
 
+import java.security.Principal;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -16,16 +19,24 @@ import com.adapsy.services.ContactService;
 @EnableAutoConfiguration
 @ComponentScan("com.adapsy")
 public class SampleController {
-	
+
 	@Autowired
 	ContactService contactService;
 
-    @GetMapping("/")
-    List<Contact> home() {
-    	return contactService.findAll();
-    }
+	@GetMapping("/")
+	List<Contact> home() {
+		return contactService.findAll();
+	}
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(SampleController.class, args);
-    }
+	@GetMapping({ "/user", "/me" })
+	public Map<String, String> user(Principal principal) {
+		Map<String, String> map = new LinkedHashMap<>();
+		map.put("name", principal.getName());
+
+		return map;
+	}
+
+	public static void main(String[] args) throws Exception {
+		SpringApplication.run(SampleController.class, args);
+	}
 }
