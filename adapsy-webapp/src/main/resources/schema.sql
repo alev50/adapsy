@@ -3,13 +3,13 @@ DROP TABLE IF EXISTS utilisateur;
 DROP TABLE IF EXISTS contact;
 
 CREATE TABLE contact (
-    id integer NOT NULL,
+    id SERIAL NOT NULL,
     nom character varying(64),
     prenom character varying(64)
 );
 
 CREATE TABLE utilisateur (
-    id integer NOT NULL,
+    id SERIAL NOT NULL,
     email character varying(255) NOT NULL UNIQUE,
     mot_de_passe character varying(64),
     actif boolean NOT NULL

@@ -52,7 +52,7 @@ public class Contact {
 
 	@Override
 	public String toString() {
-		return String.format("[%d] %d %d", id != null ? id : -1, prenom != null ? prenom : "", nom != null ? nom : "");
+		return String.format("[%d] %s %s", id != null ? id : -1, prenom != null ? prenom : "", nom != null ? nom : "");
 	}
 
 }
