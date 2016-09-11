@@ -79,5 +79,38 @@ public class ContactServiceImpl implements ContactService {
 		
 		return Long.valueOf((Integer) keyHolder.getKeys().get("id"));
 	}
+
+	@Override
+	public Boolean deleteContact(Long id) {
+		String sql = "delete from contact where id = :id";
+		SqlParameterSource parameters = new MapSqlParameterSource("id", id);
+		int result = this.template.update(sql, parameters);
+		
+		return result > 0;
+	}
+
+	@Override
+	public Boolean updateContact(Contact contact) {
+		String sql = "update contact set nom = :nom, prenom = :prenom where id = :id";
+		SqlParameterSource parameters = new BeanPropertySqlParameterSource(contact);
+		KeyHolder keyHolder = new GeneratedKeyHolder();
+		int result = this.template.update(sql, parameters, keyHolder);
+		
+		return result > 0;
+	}
+
+	@Override
+	public Long createOrUpdateContact(Contact contact) {
+		Long id = contact.getId();
+		Contact existing = getContact(id);
+		
+		if (existing != null) {
+			updateContact(contact);
+		} else {
+			id = createContact(contact);
+		}
+		
+		return id;
+	}
 	
 }

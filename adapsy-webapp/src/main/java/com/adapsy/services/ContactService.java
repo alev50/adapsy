@@ -13,5 +13,11 @@ public interface ContactService {
 	Contact getContact(Long id);
 	
 	Long createContact(Contact contact);
+	
+	Boolean deleteContact(Long id);
+	
+	Boolean updateContact(Contact contact);
+	
+	Long createOrUpdateContact(Contact contact);
 
 }
