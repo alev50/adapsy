@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.adapsy.services.ContactService;
 
 @RestController
-public class SampleController {
+public class UserController {
 
 	@Autowired
 	ContactService contactService;

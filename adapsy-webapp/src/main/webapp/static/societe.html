@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>societe</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<link rel="stylesheet" type="text/css" href="/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+	<script src="/js/jquery.js"></script>
+	<script src="/js/nav-menu.js"></script>
+	<script src="/js/user-menu.js"></script>
+	<script src="/js/help.js"></script>
+	<script src="/js/table-contact.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div class="top-bar">
+			<div class="menu">
+				<ul>
+					<li>
+						<span class="user">Sandro ORTELLI</span>
+						<ul>
+							<li class="bottom-separation user">
+								Profil
+								<div class="logo">
+									<img src="/img/logo/logo-bulle.png" width="30">
+								</div>
+							</li>
+							<li>
+								<a href="#">Support website <span class="icn-mobile"></span></a>
+							</li>
+							<li>
+								<a href="#">Email support <span class="icn-plane"></span></a>
+							</li>
+							<li>
+								<a href="#">Set up <span class="icn-setting"></span></a>
+							</li>
+							<li class="abo">
+								<a href="#">Mon abonnement</a>
+							</li>
+						</ul>
+					</li>
+					<li>-</li>
+					<li>
+						<a href="#">Déconnexion</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="header">
+			<table>
+				<tr>
+					<td class="title">
+						<h2>Liste des sociétés</h2>
+					</td>
+					<td class="section">
+						<div class="block">
+							<a href="#" class="btn btn-blue">Ajouter</a>
+						</div>
+						<div class="block">
+							<div class="btn btn-select">
+								<select>
+									<option>Actif</option>
+                                	<option>Inactif</option>
+								</select>
+							</div>
+						</div>
+						<div class="block">
+							<div class="point"></div>
+						</div>
+						<div class="block">
+							<a href="#" class="btn-circle">
+								<div class="icn-eye"></div>
+								<div class="help-top">icone</div>
+							</a>
+						</div>
+						<div class="block">
+							<a href="#" class="btn-circle">
+								<div class="icn-card"></div>
+								<div class="help-top">icone</div>
+							</a>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="search">
+			<div class="input-search">
+				<table>
+					<tr>
+						<td class="action-glass">
+							<div class="icn-glass"></div>
+						</td>
+						<td class="label">
+							<h3>Recherche multi critère :</h3>
+						</td>
+						<td class="search-argument">
+							<div class="btn blue-search">
+								Hello world
+								<div class="icn-cross">
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+
+		<div class="table-contact">
+			<div class="w20">
+				<h3>Type contact</h3>
+				<div class="select-contact">
+					<ul>
+						<li>
+							<div class="icn">
+								<span class="icn-case"></span>
+							</div>
+							<div class="label">
+								<h5>Tous</h5>
+								<p>3 à venir</p>
+							</div>
+						</li>
+						<li class="selected">
+							<div class="icn">
+								<span class="icn-tshirt"></span>
+							</div>
+							<div class="label">
+								<h5>Annonceurs</h5>
+								<p>3 à faire</p>
+							</div>
+						</li>
+						<li>
+							<div class="icn">
+								<span class="icn-tea"></span>
+							</div>
+							<div class="label">
+								<h5>Agences</h5>
+								<p>3 à écrire</p>
+							</div>
+						</li>
+						<li>
+							<div class="icn">
+								<span class="icn-bell"></span>
+							</div>
+							<div class="label">
+								<h5>Autres</h5>
+								<p>2 à organiser</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="w80">
+				<div class="array">
+					<table class="theme-blue">
+						<thead>
+							<tr>
+								<th></th>
+								<th>
+									<div class="relative">
+										<p class="title text-left">Nom</p>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<div class="padding-lr-10">
+											<p class="title icn-order">Dates</p>
+										</div>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<p class="title">Fonction</p>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<p class="title">Email</p>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<p class="title">Téléphone</p>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<p class="title">Etat</p>
+									</div>
+								</th>
+							</tr>
+							<tr>
+								<th>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="a"><label for="a"></label>
+										</div>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<div class="input">
+											<input type="text">
+										</div>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<div class="input">
+											<input type="text">
+										</div>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<div class="input">
+											<input type="text">
+										</div>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<div class="input">
+											<input type="text">
+										</div>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<div class="input">
+											<input type="text">
+										</div>
+									</div>
+								</th>
+								<th>
+									<div class="relative">
+										<div class="input">
+											<input type="text">
+										</div>
+									</div>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="annonceur">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="b"><label for="b"></label>
+										</div>
+									</div>
+								</td>
+								<td class="text-left">
+									<span><a href="contact_societe.html">Defossez</a></span>
+								</td>
+								<td>
+									<span class="no-wrap">23/01/2014</span>
+								</td>
+								<td>
+									<span class="no-wrap">Directeur Générale</span>
+								</td>
+								<td>
+									tdedossez@gmail.com
+								</td>
+								<td>
+									0658938457
+								</td>
+								<td>
+									<span class="upper red strong">actif</span>
+								</td>
+							</tr>
+							<tr class="agence">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="b"><label for="b"></label>
+										</div>
+									</div>
+								</td>
+								<td class="text-left">
+									<span>Defossez</span>
+								</td>
+								<td>
+									<span class="no-wrap">23/01/2014</span>
+								</td>
+								<td>
+									<span class="no-wrap">Directeur Générale</span>
+								</td>
+								<td>
+									tdedossez@gmail.com
+								</td>
+								<td>
+									0658938457
+								</td>
+								<td>
+									<span class="upper red strong">actif</span>
+								</td>
+							</tr>
+							<tr class="agence">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="b"><label for="b"></label>
+										</div>
+									</div>
+								</td>
+								<td class="text-left">
+									<span>Defossez</span>
+								</td>
+								<td>
+									<span class="no-wrap">23/01/2014</span>
+								</td>
+								<td>
+									<span class="no-wrap">Directeur Générale</span>
+								</td>
+								<td>
+									tdedossez@gmail.com
+								</td>
+								<td>
+									0658938457
+								</td>
+								<td>
+									<span class="upper red strong">actif</span>
+								</td>
+							</tr>
+							<tr class="agence">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="b"><label for="b"></label>
+										</div>
+									</div>
+								</td>
+								<td class="text-left">
+									<span>Defossez</span>
+								</td>
+								<td>
+									<span class="no-wrap">23/01/2014</span>
+								</td>
+								<td>
+									<span class="no-wrap">Directeur Générale</span>
+								</td>
+								<td>
+									tdedossez@gmail.com
+								</td>
+								<td>
+									0658938457
+								</td>
+								<td>
+									<span class="upper red strong">actif</span>
+								</td>
+							</tr>
+							<tr class="other">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="b"><label for="b"></label>
+										</div>
+									</div>
+								</td>
+								<td class="text-left">
+									<span>Defossez</span>
+								</td>
+								<td>
+									<span class="no-wrap">23/01/2014</span>
+								</td>
+								<td>
+									<span class="no-wrap">Directeur Générale</span>
+								</td>
+								<td>
+									tdedossez@gmail.com
+								</td>
+								<td>
+									0658938457
+								</td>
+								<td>
+									<span class="upper red strong">actif</span>
+								</td>
+							</tr>
+							<tr class="agence">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="b"><label for="b"></label>
+										</div>
+									</div>
+								</td>
+								<td class="text-left">
+									<span>Defossez</span>
+								</td>
+								<td>
+									<span class="no-wrap">23/01/2014</span>
+								</td>
+								<td>
+									<span class="no-wrap">Directeur Générale</span>
+								</td>
+								<td>
+									tdedossez@gmail.com
+								</td>
+								<td>
+									0658938457
+								</td>
+								<td>
+									<span class="upper red strong">actif</span>
+								</td>
+							</tr>
+							<tr class="if-empty">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="c"><label for="c"></label>
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="if-empty">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="c"><label for="c"></label>
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="if-empty">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="c"><label for="c"></label>
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="if-empty">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="c"><label for="c"></label>
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="if-empty">
+								<td>
+									<div class="relative">
+										<div class="checkbox">
+											<input type="checkbox" id="c"><label for="c"></label>
+										</div>
+									</div>
+								</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="pagination">
+					<ul>
+						<li><a href="#"><<</a></li>
+						<li><a href="#">1</a></li>
+						<li class="selected"><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">>></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+
+	<div class="nav-aside-bg">
+	</div>
+
+	<div id="nav-aside">
+		<div class="logo">
+			<a href="#">
+				<img src="/img/logo/logo.png" width="45">
+			</a>
+		</div>
+		<div class="wrap">
+			<h4>Enregistrement</h4>
+			<p>3:04 PM, Lundi 10 Mai</p>
+			<p>Ordre 07</p>
+		</div>
+		<div class="nav">
+			<h4>Navigation</h4>
+			<ul>
+				<li class="open">
+					<div class="title">
+						<div class="icn-group"></div>Contacts
+					</div>
+                    <ul>
+						<li class="selected"><a href="societe.html"><span class="circle"></span>Les sociétés</a></li>
+						<li><a href="personnes.html"><span class="circle"></span>Les personnes</a></li>
+                        <li><a href="#"><span class="circle"></span>Créer un contact </a></li>
+						
+					</ul>
+				</li>
+				<li>
+				
+					<div class="title">
+						<div class="icn-document"></div>Devis
+					</div>
+					<ul>
+						<li><a href="devis_list.html"><span class="circle"></span>Voir les devis</a></li>
+						<li><a href="devis.html"><span class="circle"></span>Faire un devis</a></li>
+						<li><a href="#"><span class="circle"></span>En cours</a></li>
+					</ul>
+				</li>
+				<li>
+					<div class="title">
+						<div class="icn-document"></div>Factures
+                        <ul>
+						<li><a href="#"><span class="circle"></span>Toutes les factures</a></li>
+						<li><a href="devis.html"><span class="circle"></span>Faire une facture</a></li>
+						<li><a href="#"><span class="circle"></span>En attente de facturation</a></li>
+                        <li><a href="#"><span class="circle"></span>Etats comptables</a></li>
+                        <li><a href="#"><span class="circle"></span>Relances des impayés</a></li>
+                        <li><a href="#"><span class="circle"></span>Transferts comptabilité</a></li>
+					</ul>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<div class="icn-pdf"></div>Reglements
+                        <ul>
+						<li><a href="#"><span class="circle"></span>Tous les réglements</a></li>
+						<li><a href="devis.html"><span class="circle"></span>Reglements comptants</a></li>
+						<li><a href="#"><span class="circle"></span>Réglements partiels</a></li>
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<div class="icn-binder"></div>Reporting
+					</div>
+				</li>
+				<li>
+					<div class="title">
+						<div class="icn-doc"></div>Administration
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="wrap">
+			<a href="#" class="btn btn-blue btn-large">+ Nouveau devis</a>
+		</div>
+	</div>
+</body>
+</html>
