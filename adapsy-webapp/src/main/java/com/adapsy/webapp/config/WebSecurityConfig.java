@@ -46,13 +46,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.requestMatchers().regexMatchers("/login", "/login.+", "/oauth/.+", "/_app/sign_in", "/logout"); 
 		http.exceptionHandling().authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/login"));
 		http.formLogin().loginProcessingUrl(PROCESSING_URL).usernameParameter(USERNAME_PARAMETER).passwordParameter(PASSWORD_PARAMETER);
 		http.httpBasic();
-		http.authorizeRequests().antMatchers("/login**").permitAll();
-		http.authorizeRequests().antMatchers("/oauth/**").authenticated();
+		http.authorizeRequests().anyRequest().authenticated();
+		http.authorizeRequests().antMatchers("/login**").anonymous();
 		http.authorizeRequests().antMatchers(PROCESSING_URL).anonymous();
+		http.authorizeRequests().antMatchers("/logout").anonymous();
 		http.logout().logoutSuccessUrl("/login?logout");
 		http.csrf().disable();
 	}

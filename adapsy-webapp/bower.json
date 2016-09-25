@@ -1,0 +1,21 @@
+{
+  "name": "adthruster",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Anthony Levesque"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "oauth-ng": "^0.4.10"
+  }
+}
