@@ -13,9 +13,9 @@ app.controller('societeController', function($scope, $http, $window, Endpoint, A
 	OAuthConfiguration.getConfig().protectedResources = [ '/contacts' ];
 	
 	var oauth = {	
-		site: 'https://adapsy.herokuapp.com/',
+		site: 'https://adapsy.herokuapp.com',
 		clientId: 'myClient',
-		redirectUri: 'https://adapsy.herokuapp.com/',
+		redirectUri: 'https://adapsy.herokuapp.com',
 		scope: 'read',
 		authorizePath: '/oauth/authorize',
 		tokenPath: '/oauth/token',

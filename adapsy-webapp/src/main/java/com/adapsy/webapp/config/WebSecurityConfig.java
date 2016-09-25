@@ -49,10 +49,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.exceptionHandling().authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/login"));
 		http.formLogin().loginProcessingUrl(PROCESSING_URL).usernameParameter(USERNAME_PARAMETER).passwordParameter(PASSWORD_PARAMETER);
 		http.httpBasic();
-		http.authorizeRequests().anyRequest().authenticated();
 		http.authorizeRequests().antMatchers("/login**").anonymous();
 		http.authorizeRequests().antMatchers(PROCESSING_URL).anonymous();
 		http.authorizeRequests().antMatchers("/logout").anonymous();
+		http.authorizeRequests().anyRequest().authenticated();		
 		http.logout().logoutSuccessUrl("/login?logout");
 		http.csrf().disable();
 	}
