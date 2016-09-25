@@ -31,7 +31,7 @@ app.controller('societeController', function($scope, $http, $window, Endpoint, A
 	if (!$scope.logged) {
 		Endpoint.login();
 	} else {
-		$http.get('http://localhost:8080/contacts/1').then(function(response) {
+		$http.get('https://adapsy.herokuapp.com/contacts/1').then(function(response) {
 			$scope.contact = response.data;
 		});
 	}
