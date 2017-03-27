@@ -1,0 +1,688 @@
+/* ////====== MAIN CONTENT STYLES =====//// */
+
+.main-content
+  overflow: auto
+  position: relative
+  left: 0
+  transition: $hover
+  @media(min-width:$screen-md-min)
+    padding-top: 90px
+    position: absolute
+    margin: auto
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    overflow: auto
+    left: 200px
+    padding-top: 100px
+  @media(min-width:$screen-lg-min)
+    left: 250px
+  &.open
+    @media(max-width:$screen-sm-max)
+      left: 200px
+  .container-fluid
+    +center-block()
+    @media(min-width:$screen-lg-min)
+      padding-left: 30px
+      padding-right: 30px
+
+
+
+.tab
+  position: relative
+  overflow: hidden
+.tab-header
+  margin-bottom: 25px
+  max-width: 1400px
+  +center-block()
+  @media(min-width:$screen-sm-min)
+    margin-bottom: 45px
+.tab-header-wrap
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  max-width: 1400px
+  @media(min-width:$screen-lg-min)
+    padding-left: 15px
+    padding-right: 15px
+  > div
+    padding: 0 15px
+    margin-bottom: 5px
+  .tab-header-heading
+    display: flex
+    flex-wrap: wrap
+    @media(min-width:$screen-md-min)
+      height: 40px
+    h2
+      font-size: 26px
+      font-weight: 300
+      line-height: 32px
+      color: $at-text-drk
+      margin-bottom: 0
+      margin-right: 20px
+      display: inline-block
+      @media(min-width:$screen-md-min)
+        margin-right: 30px
+        line-height: 40px
+        font-size: 32px
+    .tab-header-select
+      display: inline-block
+      width: 80px
+      padding: 0
+      background: transparent
+      border: none
+      padding-left: 20px
+      position: relative
+      border-radius: 0
+      &:before
+        content: ""
+        display: block
+        width: 10px
+        height: 10px
+        border-radius: 50%
+        background-color: $at-text-lt
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+      .select-caret
+        right: 0
+      select
+        height: 32px
+        padding: 0
+        font-size: 14px
+        color: $at-text-lt
+        @media(min-width:$screen-md-min)
+          height: 40px
+      &.active
+        &:before
+          background-color: $at-green
+        select
+          color: $at-green
+
+  .tab-header-buttons
+    .dropdown
+      display: inline-block
+      .dropdown-menu
+        left: auto
+        right: 0
+        margin-top: 10px
+        @media(min-width:$screen-sm-min)
+          min-width: 240px
+    .btn
+      padding: 10px
+      min-width: 100px
+      max-width: 100px
+      margin-right: 5px
+      @media(min-width:$screen-md-min)
+        margin-right: 10px
+        min-width: 110px
+        max-width: 110px
+        padding: 12px 10px
+      &.btn-grdnt
+        min-width: 37px!important
+        max-height: 37px!important
+        margin-right: 0
+        .svg
+          width: 16px
+          height: 4px
+          vertical-align: middle
+          position: relative
+          top: -2px
+          path
+            fill: #fff!important
+        @media(min-width:$screen-md-min)
+          min-width: 41px!important
+          max-width: 41px!important
+.tab-nav
+  max-width: 1400px
+  +center-block()
+  padding-left: 15px
+  padding-right: 15px
+  position: relative
+  z-index: 2
+  @media(min-width:$screen-lg-min)
+    padding-left: 30px
+    padding-right: 30px
+  &:after
+    content: ""
+    display: block
+    width: 200%
+    height: 1px
+    background: $at-border
+    position: absolute
+    margin: auto
+    bottom: -10px
+    left: -50%
+    right: 0
+    z-index: 1
+    @media(min-width:500px)
+      bottom: 0
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      transition: $hover
+      @media(min-width:500px)
+        display: inline-block
+        margin-right: 20px
+        padding-bottom: 5px
+        border-bottom: 2px solid transparent
+      @media(min-width:$screen-sm-min)
+        margin-right: 30px
+      @media(min-width:$screen-lg-min)
+        margin-right: 42px
+      a
+        font-size: 11px
+        color: $at-text-lt
+        text-decoration: none
+        font-weight: 500
+        text-transform: uppercase
+        transition: $hover
+        line-height: 1
+        @media(min-width:500px)
+          font-size: 12px
+        &:hover,
+        &:focus,
+        &:active
+          outline: none
+        &:hover,
+        &:active
+          color: $at-green
+      &.active
+        @media(min-width:500px)
+          border-bottom: 2px solid $at-green
+        a
+          color: $at-green
+.tab-pane
+  padding-top: 40px
+  padding-bottom: 80px
+  // display: none
+  // &.active
+  //   display: block
+
+.pane-wrap
+  &.flex
+    @media(min-width:$screen-sm-min)
+      display: flex
+      justify-content: space-between
+  > div
+    margin-bottom: 30px
+    &.pane-main
+      @media(min-width:$screen-sm-min)
+        flex-grow: 1
+        padding-right: 30px
+      @media(min-width:1400px)
+        padding-right: 60px
+    &.pane-sidebar
+      @media(min-width:$screen-sm-min)
+        min-width: 280px
+      @media(min-width:1400px)
+        min-width: 360px
+
+.pane-wrap-heading
+  margin-left: -15px
+  margin-right: -15px
+  margin-bottom: 40px!important
+  @media(min-width:$screen-xs-min)
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  > div
+    padding-left: 15px
+    padding-right: 15px
+  h3
+    font-size: 18px
+    line-height: 40px
+    @media(min-width:$screen-xs-min)
+      margin-bottom: 0
+  .pane-wrap-heading-right
+    display: flex
+  .view-select
+    height: 40px
+    +clearfix()
+    margin-right: 30px
+    margin-left: 10px
+    label
+      float: left
+      line-height: 40px
+    .select-control
+      margin-top: 0
+      float: left
+      background: transparent
+      border: none
+      select
+        height: 40px
+        padding: 0 30px 0 5px
+        font-size: 14px!important
+        font-weight: 500
+      .select-caret
+        right: 0
+  .search-form
+    height: 40px
+    margin-right: 10px
+    position: relative
+    padding-left: 25px
+    label
+      display: block
+      width: 18px
+      height: 18px
+      //background: $at-text-lt //temp
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      cursor: pointer
+      font-size: 0
+      .svg
+        width: 16px
+        height: 16px
+        path
+          fill: $at-text-lt!important
+        &.dots
+          width: 16px
+          height: 4px
+          path
+          fill: $at-text-lt!important
+    .form-control
+      height: 30px
+      width: 5px
+      border-radius: 0
+      transition: $hover
+      padding-left: 0
+      padding-right: 0
+      background: transparent
+      border: none
+      border-bottom: 1px solid transparent
+      color: $at-text-lt!important
+      &:focus,
+      &.has-value
+        border: none
+        width: 100px
+        border-bottom: 1px solid $at-border 
+        @media(min-width:$screen-sm-min)
+          width: 150px
+  .btn
+    @media(min-width:$screen-md-min)
+      min-width: 170px
+
+
+
+.well-group
+  display: flex
+  flex-wrap: wrap
+  margin-left: -15px
+  margin-right: -15px
+  margin-bottom: 20px
+  > div
+    flex-grow: 1
+    flex-basis: 280px
+    margin-left: 15px
+    margin-right: 15px
+
+.total-card
+  h3
+    font-size: 14px
+    color: $at-text-lt
+    margin-bottom: 20px
+  .total-card-total
+    font-size: 42px
+    font-weight: 300
+    color: $at-text-drk
+    span
+      opacity: 0.5
+      font-size: 20px
+      color: rgba(38, 50, 56, 0.5)
+      vertical-align: top
+      line-height: 3
+  .total-card-view
+    font-size: 12px
+    font-weight: bold
+    float: right
+    text-transform: uppercase
+    color: $at-text-lt
+    margin-top: 10px
+    position: relative
+    padding-right: 15px
+    line-height: 1
+    &:before
+      content: ""
+      display: block
+      border-style: solid
+      border-width: 4px 0 4px 4px
+      border-color: transparent transparent transparent #90a4ae
+      position: absolute
+      top: 2px
+      right: 0
+      transition: $hover
+    &:hover,
+    &:focus,
+    &:active
+      &:before
+        right: -3px
+
+
+
+.new-field
+  display: block
+  height: 40px
+  line-height: 40px
+  border-radius: 5px
+  border: dashed 2px #d7e0e7
+  text-align: center
+  margin-bottom: 40px
+  font-size: 12px
+  font-weight: 500
+  color: $at-text-drk
+  text-transform: uppercase
+  cursor: pointer
+  &:hover,
+  &:focus,
+  &:active
+    color: $at-text-drk
+    border-color: darken(#d7e0e7, 10%)
+  + .form-heading
+    margin-top: 70px
+
+
+.well-grroup-address
+  flex-wrap: wrap
+  > .well
+    width: 50%
+
+.address-item
+  padding: 0
+  position: relative
+  transition: $hover
+  .address-item-inner
+    padding: 40px 30px
+    transition: $hover
+    h4
+      font-size: 18px
+      margin-bottom: 20px
+    p
+      font-size: 16px
+      line-height: 2.0
+  .address-item-map
+    border-bottom-left-radius: 5px
+    border-bottom-right-radius: 5px
+    iframe
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+      position: relative
+      bottom: -8px
+  .action-btns
+    position: absolute
+    top: 20px
+    right: 20px
+    width: 50px
+    height: 24px
+    flex-direction: row
+    > a
+      float: left
+      background: transparent
+      &:hover,
+      &:focus,
+      &:active
+        background: $at-bg
+  .flag
+    margin-right: 5px
+    height: 10px
+    width: auto
+    position: relative
+    top: -2px
+.address-map
+  height: 150px
+
+
+.address-form
+  .form-stripped,
+  .select-stripped
+    border: none
+    border-bottom: 1px solid #fff
+    border-radius: 0
+    padding: 3px 0
+    height: auto!important
+    font-size: 16px
+    margin-bottom: 10px
+    cursor: default
+    font-weight: normal!important
+    &:disabled
+      background: none
+    &:first-child
+      font-size: 18px
+    .select-caret
+      right: 0
+      opacity: 0
+      transition: $hover
+    select
+      height: auto
+      padding: 0
+  .save-cancel-btns
+    margin-top: 20px
+    .btn
+      &:first-child
+        margin-right: 5px
+  &.active
+    .form-stripped,
+    .select-stripped
+      border-bottom: 1px solid $border
+      cursor: text
+      .select-caret
+        opacity: 1
+      
+
+.new-address
+  min-height: 300px
+  border-radius: 5px
+  border: dashed 2px #d7e0e7
+  text-align: center
+  font-size: 12px
+  font-weight: 500
+  color: $at-text-drk
+  text-transform: uppercase
+  cursor: pointer
+  background: transparent
+  position: relative
+  transition: $hover
+  &:hover,
+  &:focus,
+  &:active
+    color: $at-text-drk
+    border-color: darken(#d7e0e7, 10%)
+  .address-form
+    opacity: 0
+    visibility: hidden
+  &.active
+    background: #fff
+    .address-form
+      opacity: 1
+      visibility: visible
+  .new-address-btn
+    background: none
+    border: none
+    border-radius: 5px
+    +cover()
+    &:hover,
+    &:focus,
+    &:active
+      outline: none
+
+  
+
+
+
+.budget-box
+  max-width: 360px
+  background: #fff
+  border-radius: 5px
+  .budget-box-top
+    background-image: linear-gradient(45deg, #3bd0e2, #40eac6), linear-gradient($at-green, $at-green)
+    border-radius: 5px
+    height: 180px
+    +v-center-parent()
+    .budget-box-top-inner 
+      +v-center()
+      color: #fff
+      text-align: center
+      h3
+        font-size: 32px
+        color: #fff
+        font-weight: 300
+        margin-bottom: 0
+  .budget-box-edit
+    width: 60px
+    height: 60px
+    border: none
+    background: #fff
+    border-radius: 50%
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05)
+    transition: $hover
+    position: absolute
+    margin: auto
+    top: -30px
+    left: 0
+    right: 0
+    &:hover,
+    &:focus,
+    &:active
+      outline: none
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1)
+    .svg
+      width: 20px
+      height: 20px
+      path,
+      rect
+        fill: $at-green
+  .budget-box-bottom
+    padding: 40px
+    padding-top: 55px
+    position: relative
+    @media(min-width:$screen-md-min) and (max-width:$screen-md-max)
+      padding: 30px
+      padding-top: 55px 
+    > p
+      border-bottom: 1px dashed #d7e0e7
+      padding-bottom: 15px
+      color: $at-text-drk
+      display: flex
+      justify-content: space-between
+      &:last-child
+        border: none
+        padding-bottom: 0
+
+.sidebar-box
+  max-width: 360px
+  border-radius: 5px
+  background-color: #ffffff
+  text-align: center
+  padding: 40px
+  padding-top: 55px
+  position: relative
+  @media(min-width:$screen-md-min) and (max-width:$screen-md-max)
+    padding: 30px
+    padding-top: 55px
+  h3
+    font-size: 18px
+    color: $at-text-drk
+    margin-bottom: 20px
+  p
+    max-width: 200px
+    color: $at-text-lt
+    +center-block()
+    @media(min-width:$screen-lg-min)
+      font-size: 16px
+  .svg
+    width: 60px
+    height: 60px
+    margin-bottom: 20px
+    .st0,
+    .st1,
+      stroke: $at-green
+    g
+      fill: $at-green
+
+.sidebar-card
+  max-width: 360px
+  border-radius: 5px
+  background-color: #ffffff
+  .card-img
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    img
+      width: 100%
+      height: auto
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
+  .sidebar-card-text
+    padding: 40px
+    color: $at-text-lt
+    @media(min-width:$screen-lg-min)
+      font-size: 16px
+
+
+//modal
+.modal
+  margin-bottom: 0!important
+  .modal-dialog
+    margin-top: 30px
+    @media(min-width:$screen-sm-min)
+      margin-top: 40px
+  .modal-content
+    border: none
+    border-radius: 5px
+    background-color: $at-bg
+    box-shadow: 0 50px 30px 0 rgba(0, 0, 0, 0.08)
+  .modal-header
+    border: none
+    padding-bottom: 0!important
+    @media(min-width:$screen-sm-min)
+      padding: 30px
+    @media(min-width:$screen-lg-min)
+      padding: 40px
+    h4
+      font-size: 16px
+      @media(min-width:$screen-sm-min)
+        font-size: 18px
+      span
+        color: $at-text-lt
+  .close
+    width: 24px
+    height: 24px
+    border-radius: 50%
+    background: #90a4ae
+    text-shadow: none
+    opacity: 1
+    font-weight: normal
+    color: #fff
+    position: absolute
+    top: -10px
+    right: 15px
+    &:hover,
+    &:focus,
+    &:active
+      outline: none
+        opacity: 0.8
+  .modal-body
+    @media(min-width:$screen-sm-min)
+      padding: 30px
+    @media(min-width:$screen-lg-min)
+      padding: 40px
+  .modal-footer
+    border: none
+    padding-top: 0!important
+    @media(min-width:$screen-sm-min)
+      padding: 30px
+    @media(min-width:$screen-lg-min)
+      padding: 40px
+  .label-spacer
+    height: 20px
+    @media(min-width:$screen-md-min)
+      height: 50px
+
+.modal-backdrop
+  background: #d3f2ef
+  &.in
+    opacity: 0.95

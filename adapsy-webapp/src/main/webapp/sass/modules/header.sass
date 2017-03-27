@@ -1,0 +1,135 @@
+.header
+  display: flex
+  align-items: center
+  padding-top: 10px
+  padding-bottom: 10px
+  background: $at-bg
+  transition: $hover
+  @media(max-width:$screen-sm-max)
+    background: #fff
+    margin-bottom: 40px
+  @media(min-width:$screen-md-min)
+    position: fixed
+    top: 0
+    right: 0
+    z-index: 9
+    left: 200px
+    padding-top: 20px
+    padding-bottom: 20px
+  @media(min-width:$screen-lg-min)
+    left: 250px
+  > div
+    height: 30px
+    &:nth-child(2)
+      //background: #eee //temp
+    &:last-child
+      //background: #eee //temp
+
+  .header-search
+    padding-left: 15px
+    position: relative
+    flex-grow: 1
+    @media(min-width:$screen-lg-min)
+      padding-left: 30px
+    .icon-search
+      width: 16px
+      height: 16px
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 15px
+      @media(min-width:$screen-lg-min)
+        left: 30px
+      path
+        fill: $at-text-lt
+    .form-control
+      font-size: 14px
+      height: 30px
+      border-radius: 0
+      padding-left: 0
+      padding-right: 0
+      background: transparent
+      border: none
+      padding-left: 25px
+      @media(min-width:$screen-lg-min)
+        padding-left: 35px
+
+  .header-user
+    padding-left: 15px
+    padding-right: 15px
+    line-height: 30px
+    @media(min-width:$screen-lg-min)
+      padding-left: 30px
+      padding-right: 30px
+    .dropdown
+      +clearfix()
+      vertical-align: top
+      cursor: pointer
+      .user-name
+        display: inline-block
+        font-size: 14px
+        line-height: 30px
+        color: $at-text-lt
+        cursor: pointer
+        vertical-align: top
+        margin-right: 10px
+        @media(max-width:$screen-sm-max)
+          display: none
+      .user-image
+        display: inline-block
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        //background: $at-text-lt
+        vertical-align: top
+        cursor: pointer
+        margin-right: 20px
+        img
+          max-width: 30px
+          max-height: 30px
+          border-radius: 50%
+      .select-caret
+        cursor: pointer
+      .dropdown-menu
+        left: auto
+        right: 0
+        margin-top: 10px
+
+
+.nav-toggle
+  //position: fixed
+  //bottom: 15px
+  //left: 15px
+  // z-index: 99999999
+  // background: #fefefe
+  //padding: 15px 12px
+  //border-radius: 5px
+  //box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.08)
+  margin-left: 15px
+  margin-right: 10px
+  transition: $hover
+  @media(min-width:$screen-md-min)
+    display: none
+    visibility: hidden
+    opacity: 0
+  .icon-bar
+    display: block
+    width: 22px
+    height: 2px
+    border-radius: 1px
+    background: $at-text
+    transition: $hover
+    + .icon-bar
+      margin-top: 4px
+  &.open
+    //left: 215px
+    .icon-bar
+      position: relative
+      &:nth-child(1)
+        top: 6px
+        transform: rotate(45deg)
+      &:nth-child(2)
+        background-color: transparent
+      &:nth-child(3)
+        top: -6px
+        transform: rotate(-45deg)

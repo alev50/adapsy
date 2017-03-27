@@ -1,0 +1,161 @@
+/* ////====== STYLE GUIDE STYLES =====//// */
+
+.guide
+  +center-block
+.guide-hero
+  text-align: center
+  color: #fff
+  padding: 100px 15px
+  background: darken($text-drk, 20%)
+  h1
+    color: #fff
+    font-size: 50px
+    font-weight: bold
+  p
+    font-size: 14px
+
+
+.guide-heading 
+  font-size: 14px
+  color: $text-drk
+  text-transform: uppercase
+  margin-bottom: 60px
+  font-weight: bold
+  span
+    color: $text-lt
+    display: inline-block
+    margin-right: 5px
+
+.guide-section
+  margin-top: 100px
+  margin-bottom: 100px
+  padding-bottom: 100px
+  padding-left: 15px
+  padding-left: 15px
+  border-bottom: 1px solid #f4f4f4
+  max-width: 800px
+  +center-block()
+  &:last-child
+    border-bottom: 0
+    margin-bottom: 0
+
+
+.guide-footer
+  padding-top: 30px
+  padding-bottom: 30px
+  border-top: 1px solid #f4f4f4
+  text-align: center
+  p
+    font-size: 14px
+    color: $text-lt
+
+//Colors
+.colors
+  .color-wrap
+    text-align: center
+    width: 110px
+    float: left
+    margin-right: 40px
+    margin-bottom: 40px
+    .color-item
+      display: block
+      width: 110px
+      height: 110px
+      border-radius: 50%
+      background: #eee
+      margin-bottom: 10px
+      text-align: center
+      line-height: 115px
+      color: #fff
+      font-size: 14px
+      text-transform: uppercase
+      font-weight: bold
+    p
+      color: $text-lt
+      font-size: 14px
+.color-set1
+  .color-wrap
+    &:nth-child(1)
+      .color-item
+        background: $brand-primary
+    &:nth-child(2)
+      .color-item
+        background: $brand-success
+    &:nth-child(3)
+      .color-item
+        background: $brand-warning
+    &:nth-child(4)
+      .color-item
+        background: $brand-error
+    &:nth-child(5)
+      .color-item
+        background: $brand-info
+.color-set2
+  .color-wrap
+    &:nth-child(1)
+      .color-item
+        background: $text
+    &:nth-child(2)
+      .color-item
+        background: $text-drk
+    &:nth-child(3)
+      .color-item
+        background: $text-lt
+
+
+//Typography
+.typo-font
+  font-size: 16px
+  color: $text-lt
+  line-height: 1.2
+  span
+    display: inline-block
+    color: $text-drk
+    font-size: 40px
+    margin-right: 15px
+  &.light
+    span
+      font-weight: 300!important
+  &.regular
+    span
+      font-weight: 300!important
+  &.medium
+    span
+      font-weight: normal!important
+  &.semi-bold
+    span
+      font-weight: 600!important
+  &.bold
+    span
+      font-weight: bold!important
+
+
+//Buttons
+.button-set
+  margin-bottom: 20px
+  .btn
+    margin-right: 10px
+    margin-bottom: 10px
+  &.btn-sizes
+    .btn
+      &:nth-child(1)
+        position: relative
+        top: -4px
+      &:nth-child(2)
+        position: relative
+        top: -2px
+    
+
+
+//form
+.guide-form
+  .form-control
+    &.hover
+      border-color: $primary
+  .form-group
+    margin-bottom: 60px
+  .options-inline
+    margin-right: 40px
+  .toggle-input
+    display: inline-block
+    margin-right: 40px

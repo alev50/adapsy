@@ -1,0 +1,412 @@
+/* ////====== FORMS STYLES =====//// */
+
+.form-group
+  position: relative
+  @media (min-width:$screen-sm-min)
+    margin-bottom: 25px
+  &.row
+    margin-left: -10px
+    margin-right: -10px
+    > div
+      padding-left: 10px
+      padding-right: 10px
+      position: relative
+      &.col-xs-12
+        label
+          margin-bottom: 10px
+      @media (max-width:$screen-xs-max)
+        margin-bottom: 15px
+        &:last-child
+          margin-bottom: 0
+  + .form-heading
+    margin-top: 40px
+
+.form-control
+  box-shadow: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  padding-left: 20px
+  padding-right: 20px
+  font-size: 16px
+  border-width: $form-border-wd
+  &::-webkit-input-placeholder
+    color: $at-text-lt
+  &:-moz-placeholder
+    color: $at-text-lt
+  &::-moz-placeholder
+    color: $at-text-lt
+  &:-ms-input-placeholder
+    color: $at-text-lt
+  &:focus,
+  &:active
+    border-color: $primary
+    box-shadow: none
+    outline: none
+  @media (max-width:$screen-xs-min)
+    font-size: 14px
+.form-control,
+.select-control
+  border-color: #fff
+  border-radius: $border-radius
+  &.success
+    border-color: $brand-success!important
+    color: $brand-success!important
+  &.error
+    border-color: $brand-error!important
+    color: $brand-error!important
+  &:disabled
+    background: #e4edf0
+  
+input[type="text"].form-control,
+input[type="email"].form-control,
+select
+  height: 55px
+  @media (min-width:$screen-sm-min)
+    height: 60px
+
+.form-control,
+select
+  padding-left: 15px
+  padding-right: 15px
+  @media (min-width:$screen-sm-min)
+    padding-left: 20px
+    padding-right: 20px
+
+textarea.form-control
+  padding-top: 15px
+  padding-bottom: 15px
+  @media (min-width:$screen-sm-min)
+    padding-top: 20px
+    padding-bottom: 20px
+    
+
+label
+  font-size: 14px
+  line-height: 1
+  color: $at-text-lt
+  font-weight: normal
+  margin-bottom: 0
+  + .form-control,
+  + .select-control
+    margin-top: 5px
+  &.required
+    &:before
+      content: "*"
+      display: inline-block
+      margin-right: 5px
+      color: $at-green
+
+.label-spacer
+  display: block
+  height: 50px
+
+.help-block
+  color: $text
+  line-height: 1.2
+  font-size: 14px
+  margin-top: 10px
+
+.form-well
+  background: #dcf3f3
+  border-radius: 5px
+  text-align: center
+  color: $at-green
+  height: 60px
+  margin-top: 5px
+  +v-center-parent()
+  padding: 5px 15px
+  p
+    +v-center()
+    line-height: 1.2
+    font-size: 14px
+
+.form-icon
+  max-width: 16px
+  height: auto
+  position: absolute
+  right: 25px
+  bottom: 20px
+  path
+    fill: $at-text-lt
+
+.select-caret
+  position: relative
+  display: block
+  width: 10px
+  height: 5px
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    border-top: 5px solid $at-text-lt
+    border-left: 5px solid transparent
+    border-right: 5px solid transparent
+    border-radius: 20px
+    
+.select-control
+  padding: 0
+  margin: 0
+  border-width: $form-border-wd
+  border-style: solid
+  overflow: hidden
+  position: relative
+  background: #fff
+  z-index: 2
+  .select-caret
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    right: 20px
+    z-index: -1
+  select
+    padding: 0 20px
+    width: 100%
+    color: $text
+    border: none
+    box-shadow: none
+    background-color: transparent
+    background-image: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    &::-ms-expand
+      display: none
+    font-size: 16px
+    &:hover
+      cursor: pointer!important
+    &:focus,
+    &:active
+      outline: none!important
+    @media (max-width:$screen-xs-min)
+      font-size: 14px
+  &.disabled
+    background: #e4edf0
+    &:hover
+      cursor: no-drop!important
+      select
+        cursor: no-drop!important
+
+.options
+  margin-bottom: 5px
+  &.options-inline
+    margin-bottom: 15px
+    @media (min-width:$screen-xs-min)
+      display: inline-block
+      margin-right: 20px
+      margin-bottom: 0
+  label
+    position: relative
+    padding-left: 33px
+    color: $at-text
+    transition: $hover
+    cursor: pointer
+    &:before
+      content: ""
+      display: block
+      width: 18px
+      height: 18px
+      border-radius: 3px
+      background-color: #fefefe
+      border: solid 2px $at-border
+      position: absolute
+      top: -3px
+      left: 0
+    &:after
+      content: ""
+      display: block
+      width: 18px
+      height: 18px
+      border-radius: 3px
+      background: #e2f7f5 url('../img/icon-check.png')no-repeat center
+      background-size: 10px 8px
+      position: absolute
+      top: -3px
+      left: 0
+      transition: $hover
+      opacity: 0
+  input
+    margin: 0!important
+    display: none
+    visibility: hidden
+    &:checked
+      + label
+        &:after
+          opacity: 1
+    &:disabled
+      + label
+        color: $text-lt
+        &:before
+          background: #e4edf0
+        &:hover
+          cursor: no-drop!important
+
+.form-heading
+  position: relative
+  margin-bottom: 30px
+  @media(min-width:$screen-sm-min)
+      margin-bottom: 40px
+  h3
+    display: inline-block
+    font-size: 18px
+    color: $at-text-drk
+    margin-bottom: 0
+    z-index: 1
+    padding-right: 20px
+    background: $at-bg
+    position: relative
+    z-index: 2
+  &:after
+    content: ""
+    display: block
+    width: 100%
+    height: 1px
+    background: $at-border
+    position: absolute
+    top: 12px
+    left: 0
+    z-index: 1
+
+
+.question
+  position: absolute
+  right: 25px
+  bottom: 10px
+  @media(min-width:$screen-sm-min)
+    bottom: 13px
+  .svg
+    width: 14px
+    height: 14px
+    path
+      fill: $at-text-lt
+    &:hover,
+    &:focus,
+    &:active
+      path
+        fill: darken($at-text-lt, 5%)
+
+.popover
+  border-radius: 0
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.15)
+  border: none
+  font-size: 14px!important
+  font-weight: normal
+  line-height: 1.6
+  color: $text
+  max-width: 350px
+  .popover-content
+    padding: 20px
+  @media (min-width:$screen-sm-min)
+    .popover-content
+      min-width: 200px
+  &.top
+    .arrow
+      border-top-color: #ececec!important
+
+
+.action-btns
+  height: 60px
+  width: 24px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  position: absolute
+  bottom: 0
+  right: -35px
+  > a
+    vertical-align: middle
+    display: inline-block
+    width: 24px
+    height: 24px
+    border-radius: 3px
+    background-color: $at-bg
+    text-align: center
+    font-size: 0
+    +v-center-parent()
+    background: #e4edf0
+    &:hover,
+    &:focus,
+    &:active
+      background-color: darken(#e4edf0, 5%)
+    .svg
+      width: 10px
+      height: 10px
+      +v-center()
+      path
+        fill: #90a4ae
+
+
+
+//Toggle
+.tgl
+  display: none
+.tgl, .tgl:after,
+.tgl:before,
+.tgl *,
+.tgl *:after,
+.tgl *:before,
+.tgl + .tgl-btn
+  box-sizing: border-box
+.tgl::-moz-selection,
+.tgl:after::-moz-selection,
+.tgl:before::-moz-selection,
+.tgl *::-moz-selection,
+.tgl *:after::-moz-selection,
+.tgl *:before::-moz-selection,
+.tgl + .tgl-btn::-moz-selection
+  background: none
+.tgl::selection,
+.tgl:after::selection,
+.tgl:before::selection,
+.tgl *::selection,
+.tgl *:after::selection,
+.tgl *:before::selection,
+.tgl + .tgl-btn::selection
+  background: none
+.tgl + .tgl-btn
+  outline: 0
+  display: block
+  width: 54px
+  height: 28px
+  margin-bottom: 0!important
+  position: relative
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  @media (max-width:$screen-sm-max)
+    width: 45px
+    height: 23px
+.tgl + .tgl-btn:after,
+.tgl + .tgl-btn:before
+  position: relative
+  display: block
+  content: ""
+  width: 50%
+  height: 100%
+.tgl + .tgl-btn:after
+  left: 0
+.tgl + .tgl-btn:before
+  display: none
+.tgl:checked + .tgl-btn:after
+  left: 50%
+.tgl-light + .tgl-btn
+  background: #fafafa
+  border: 1px solid #f4f4f4
+  border-radius: 28px
+.tgl-light + .tgl-btn:after
+  border-radius: 50%
+  background: #fff
+  box-shadow: 0px 1px 3px 0px rgba(128,128,131,0.30)
+  -webkit-transition: all .2s ease
+  transition: all .2s ease
+.tgl-light:checked + .tgl-btn
+  background: $brand-success
+.tgl-light:disabled + .tgl-btn:after
+  background: #fafafa
+.tgl-light:disabled
+  cursor: no-drop!important
+  + .tgl-btn
+    cursor: no-drop!important

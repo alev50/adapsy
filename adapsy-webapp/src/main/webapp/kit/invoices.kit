@@ -1,0 +1,160 @@
+<!-- @import 'imports/head.kit' -->
+
+    <!-- @import 'imports/nav.kit' -->
+
+    <div class="main-content" id="main-content">
+      
+      <!-- @import 'imports/header.kit' -->
+
+      <div class="tab">
+        <!-- @import 'imports/tab-header.kit' -->
+
+        <!-- $nav-active4:class="active" --><!-- @import 'imports/tab-nav.kit' -->
+
+        <div class="tab-pane tab-invoices">
+          <div class="container-fluid">
+            <div class="pane-wrap">
+
+              <div class="pane-wrap-heading">
+                <div class="pane-wrap-heading-left">
+                  <h3>Invoices <span>(3)</span></h3>
+                </div>
+                <div class="pane-wrap-heading-right">
+                  <div class="search-form">
+                    <label for="search-form"><img src="img/icon-search.svg" class="icon-search svg"></label>
+                    <input type="text" class="form-control" id="search-form">
+                  </div>
+                  <a href="#" class="btn btn-primary">+ New Invoice</a>
+                </div>
+              </div><!--END of .pane-wrap-heading-->
+
+              <div class="table-wrap">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Invoice</th>
+                      <th>Mark</th>
+                      <th>Budget</th>
+                      <th>Due Date</th>
+                      <th>Amount</th>
+                      <th>Status</th>
+                      <th><!--Actions--></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="table-invoice">
+                          <h4>Inv 3211</h4>
+                          <p>Dior Fashion</p>
+                        </div>
+                      </td>
+                      <td>Dior Addict</td>
+                      <td>Dior Parfume</td>
+                      <td>
+                        <div class="table-duedate">
+                          <h4>20 Jun 2017</h4>
+                          <p>due in 17 days</p>
+                        </div>
+                      </td>
+                      <td>$ 18,920.00</td>
+                      <td>
+                        <p class="table-status waiting">Waiting Payment</p>
+                      </td>
+                      <td class="table-action-td">
+                        <div class="table-actions">
+                          <a href="#" class="table-action edit" data-toggle="tooltip" data-placement="top" title="Edit"><img src="img/icon-edit.svg" class="svg"></a>
+                          <a href="#" class="table-action delete" data-toggle="tooltip" data-placement="top" title="Action"><img src="img/icon-dots2.svg" class="svg dots"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table-invoice">
+                          <h4>Inv 3211</h4>
+                          <p>Dior Fashion</p>
+                        </div>
+                      </td>
+                      <td>Dior Addict</td>
+                      <td>Dior Parfume</td>
+                      <td>
+                        <div class="table-duedate">
+                          <h4>20 Jun 2017</h4>
+                          <p>due in 2 days</p>
+                        </div>
+                      </td>
+                      <td>$ 18,920.00</td>
+                      <td>
+                        <p class="table-status overdue">Overdue</p>
+                      </td>
+                      <td class="table-action-td">
+                        <div class="table-actions">
+                          <a href="#" class="table-action edit" data-toggle="tooltip" data-placement="top" title="Edit"><img src="img/icon-edit.svg" class="svg"></a>
+                          <a href="#" class="table-action delete" data-toggle="tooltip" data-placement="top" title="Action"><img src="img/icon-dots2.svg" class="svg dots"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table-invoice">
+                          <h4>Inv 3211</h4>
+                          <p>Dior Fashion</p>
+                        </div>
+                      </td>
+                      <td>Dior Addict</td>
+                      <td>Dior Parfume</td>
+                      <td>
+                        <div class="table-duedate">
+                          <h4>20 Jun 2017</h4>
+                          <p>due in 17 days</p>
+                        </div>
+                      </td>
+                      <td>$ 18,920.00</td>
+                      <td>
+                        <p class="table-status waiting">Waiting Payment</p>
+                      </td>
+                      <td class="table-action-td">
+                        <div class="table-actions">
+                          <a href="#" class="table-action edit" data-toggle="tooltip" data-placement="top" title="Edit"><img src="img/icon-edit.svg" class="svg"></a>
+                          <a href="#" class="table-action delete" data-toggle="tooltip" data-placement="top" title="Action"><img src="img/icon-dots2.svg" class="svg dots"></a>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="table-invoice">
+                          <h4>Inv 3211</h4>
+                          <p>Dior Fashion</p>
+                        </div>
+                      </td>
+                      <td>Dior Addict</td>
+                      <td>Dior Parfume</td>
+                      <td>
+                        <div class="table-duedate">
+                          <h4>20 Jun 2017</h4>
+                          <p>due in 2 days</p>
+                        </div>
+                      </td>
+                      <td>$ 18,920.00</td>
+                      <td>
+                        <p class="table-status paid">Paid</p>
+                      </td>
+                      <td class="table-action-td">
+                        <div class="table-actions">
+                          <a href="#" class="table-action edit" data-toggle="tooltip" data-placement="top" title="Edit"><img src="img/icon-edit.svg" class="svg"></a>
+                          <a href="#" class="table-action delete" data-toggle="tooltip" data-placement="top" title="Action"><img src="img/icon-dots2.svg" class="svg dots"></a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div><!--END of .table-wrap-->
+
+            </div>
+          </div>
+        </div><!--END of .tab-invoices-->
+
+      </div><!--END of .tab-->
+    </div><!--END of .main-content-->
+
+<!-- @import 'imports/foot.kit' -->

@@ -1,0 +1,165 @@
+<!-- @import 'imports/head.kit' -->
+
+    <!-- @import 'imports/nav.kit' -->
+
+    <div class="main-content" id="main-content">
+      
+      <!-- @import 'imports/header.kit' -->
+
+      <div class="tab">
+        <!-- @import 'imports/tab-header.kit' -->
+
+        <!-- $nav-active1:class="active" --><!-- @import 'imports/tab-nav.kit' -->
+
+        <div class="tab-pane tab-advertiser">
+          <div class="container-fluid">
+            <div class="pane-wrap flex">
+              <div class="pane-main">
+                <div class="well-group">
+                  <div class="total-card well">
+                    <h3>Total Proposal</h3>
+                    <p class="total-card-total"><span>$</span> 19,935.00</p>
+                    <a href="#" class="total-card-view">View</a>
+                  </div>
+                  <div class="total-card well">
+                    <h3>Total  Invoiced</h3>
+                    <p class="total-card-total"><span>$</span> 6,200.00</p>
+                    <a href="#" class="total-card-view">View</a>
+                  </div>
+                </div>
+                <div class="form-heading">
+                  <h3>Company Info</h3>
+                </div>
+                <div class="form-group">
+                  <label class="required">Name</label>
+                  <input type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" placeholder="Email Address">
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Phone Number</label>
+                    <input type="text" class="form-control" placeholder="Phone Number">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Sector</label>
+                  <div class="select-control">
+                    <span class="select-caret"></span>
+                    <select>
+                      <option>Select</option>
+                      <option>Select</option>
+                      <option>Select</option>
+                    </select>
+                  </div>
+                  <div class="action-btns">
+                    <a href="#" class="edit" data-toggle="tooltip" data-placement="top" title="Edit"><img src="img/icon-edit.svg" class="svg"></a>
+                    <a href="#" class="delete" data-toggle="tooltip" data-placement="top" title="Delete"><img src="img/icon-cross.svg" class="svg"></a>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Website URL</label>
+                  <input type="text" class="form-control" placeholder="http://">
+                </div>
+                <div class="new-field">+ New Field</div>
+                <div class="form-heading">
+                  <h3>Address</h3>
+                </div>
+                <div class="well-grroup-address well-group">
+                  <div class="address-item well">
+                    <div class="address-item-inner">
+                      <div class="address-form">
+                        <input type="text" class="form-control form-stripped" value="Main Headquaters" disabled>
+                        <input type="text" class="form-control form-stripped" value="Park du princes 82" disabled>
+                        <input type="text" class="form-control form-stripped" value="5th Floor, Office 326 - 338" disabled>
+                        <input type="text" class="form-control form-stripped" value="75001 Paris" disabled>
+                        <div class="select-control select-stripped">
+                          <span class="select-caret"></span>
+                          <select disabled>
+                            <option>France</option>
+                            <option>England</option>
+                          </select>
+                        </div>
+                        <div class="save-cancel-btns text-right" style="display: none;">
+                          <button type="button" class="btn btn-sm btn-default btn-cancel">Cancel</button>
+                          <button type="button" class="btn btn-sm btn-primary btn-save">Save</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="action-btns">
+                      <a href="#" class="edit"><img src="img/icon-edit.svg" class="svg"></a>
+                      <a href="#" class="delete"><img src="img/icon-cross.svg" class="svg"></a>
+                    </div>
+                    <div class="address-item-map">
+                      <div id="address-map" class="address-map"></div>
+                      <!--Google maps-->
+                      <script type="text/javascript">
+                      function initMap() {
+                        var mapOptions = {
+                        zoom: 13,
+                        disableDefaultUI: true,
+                        center: new google.maps.LatLng(40.6700, -73.9400),
+                        styles: [{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}]
+                      };
+                      var mapElement = document.getElementById('address-map');
+                      var map = new google.maps.Map(mapElement, mapOptions);
+
+                      var marker1 = new google.maps.Marker({
+                        position: new google.maps.LatLng(40.6700, -73.9400),
+                        map: map,
+                        icon: 'img/icon-map-marker.png'
+                      });
+                      }
+                      </script>
+                      <!--Please replace API KEY-->
+                      <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&amp;key=AIzaSyC8c-K7S1S1C3knS1levBeAnM_IVBTkP2M&amp;&callback=initMap"></script>
+                    </div>
+                  </div>
+                  <div class="new-address well">
+                    <button type="button" class="new-address-btn">+ New Address</button>
+                    <div class="address-form active">
+                      <input type="text" class="form-control form-stripped" value="Main Headquaters">
+                      <input type="text" class="form-control form-stripped" value="Park du princes 82">
+                      <input type="text" class="form-control form-stripped" value="5th Floor, Office 326 - 338">
+                      <input type="text" class="form-control form-stripped" value="75001 Paris">
+                      <div class="select-control select-stripped">
+                        <span class="select-caret"></span>
+                        <select>
+                          <option>France</option>
+                          <option>England</option>
+                        </select>
+                      </div>
+                      <div class="save-cancel-btns text-right">
+                        <button type="button" class="btn btn-sm btn-default btn-cancel">Cancel</button>
+                        <button type="button" class="btn btn-sm btn-primary btn-save">Save</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pane-sidebar">
+                <div class="budget-box">
+                  <div class="budget-box-top">
+                    <div class="budget-box-top-inner">
+                      <h3>$ 120,000.00</h3>
+                      <p>Administered Budget</p>
+                    </div>
+                  </div>
+                  <div class="budget-box-bottom">
+                    <button type="button" class="budget-box-edit"><img src="img/icon-edit2.svg" class="svg"></button>
+                    <p><span>Dior Couture</span> <span>$48,000.00</span></p>
+                    <p><span>Dior Parfume</span> <span>$12,000.00</span></p>
+                    <p><span>Dior Maquillage</span> <span>$60,000.00</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!--END of .tab-advertiser-->
+
+      </div><!--END of .tab-->
+    </div><!--END of .main-content-->
+
+<!-- @import 'imports/foot.kit' -->

@@ -1,0 +1,261 @@
+/* ////====== TABLES STYLES =====//// */
+
+@media(max-width:$screen-xs-max)
+  .table-wrap
+    table, thead, tbody, th, td, tr
+      display: block
+    thead tr
+      position: absolute
+      top: -9999px
+      left: -9999px
+    td
+      border: none
+      border-bottom: 1px solid #eee
+      position: relative
+      padding-left: 45% !important
+      white-space: normal
+      text-align: left
+      &:before
+        position: absolute
+        top: 8px
+        left: 15px
+        width: 40%
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+        text-align: left
+        font-size: 12px
+        font-weight: 500
+        text-transform: uppercase
+        color: $at-text-lt
+      &:first-child
+        padding-top: 30px
+      &:last-child
+        padding-bottom: 30px
+      &:first-child:before
+        top: 30px
+      &:before
+        content: attr(data-title)
+  .table tbody tr
+    margin-bottom: 20px
+    td
+      border: none
+
+
+.table
+  border-collapse: separate
+  border-spacing: 0 10px
+  thead
+    tr
+      th
+        font-size: 12px
+        font-weight: 500
+        text-transform: uppercase
+        color: $at-text-lt
+        border: none
+        @media(min-width:$screen-sm-min)
+          padding: 0 10px
+        &:first-child
+          @media(min-width:$screen-md-min)
+            padding-left: 30px
+        &:last-child
+          @media(min-width:$screen-md-min)
+            padding-right: 30px
+  tbody
+    tr
+      transition: $hover
+      &:hover
+        td
+          background: $at-green-hover
+      td
+        background: #fefefe
+        border: none
+        line-height: 1.2!important
+        vertical-align: middle
+        font-size: 14px
+        transition: $hover
+        @media(min-width:$screen-sm-min)
+          padding: 15px 10px
+        &:first-child
+          border-top-left-radius: 4px
+          border-bottom-left-radius: 4px
+          @media(min-width:$screen-md-min)
+            padding-left: 30px
+        &:last-child
+          border-top-right-radius: 4px
+          border-bottom-right-radius: 4px
+          @media(min-width:$screen-md-min)
+            padding-right: 30px
+          @media(min-width:$screen-sm-min)
+            &.table-action-td
+              width: 60px
+
+.table-name
+  height: 34px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-width: 140px
+  h4
+    margin-bottom: 5px
+    font-size: 14px
+    font-weight: 500
+  p
+    color: $at-text-lt
+    position: relative
+
+
+.table-invoice
+  height: 34px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  h4
+    margin-bottom: 5px
+    font-size: 14px
+    font-weight: 500
+  p
+    color: $at-text-lt
+    position: relative
+
+.table-duedate
+  height: 34px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  h4
+    margin-bottom: 5px
+    font-size: 14px
+    font-weight: normal
+  p
+    color: $at-text-lt
+    position: relative
+
+.table-campaign-name
+  height: 34px
+  p
+    line-height: 34px
+    font-weight: 500
+
+.table-address
+  max-width: 160px
+
+.table-actions
+  width: 90px
+  margin-left: -5px
+  .table-action
+    vertical-align: middle
+    display: inline-block
+    width: 32px
+    height: 32px
+    border-radius: 3px
+    background-color: $at-bg
+    text-align: center
+    font-size: 0
+    margin: 0 5px
+    +v-center-parent()
+    &:hover,
+    &:focus,
+    &:active
+      background-color: darken($at-bg, 5%)
+    .svg
+      width: 12px
+      height: 12px
+      +v-center()
+      path
+        fill: #90a4ae
+
+.table-status
+  color: $at-text-lt
+  line-height: 1
+  &:before
+    content: ""
+    display: inline-block
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background-color: #90a4ae
+    margin-right: 10px
+  &.waiting
+    color: $at-text-lt
+    &:before
+      background-color: #90a4ae
+  &.overdue,
+  &.expired
+    color: $at-red
+    &:before
+      background-color: $at-red
+  &.open
+    color: $at-yellow
+    &:before
+      background-color: $at-yellow
+  &.paid,
+  &.completed,
+    color: $at-green
+    &:before
+      background-color: $at-green
+
+.table-type
+  .svg
+    max-width: 16px
+    max-height: 16px
+    margin-right: 5px
+    position: relative
+    top: 2px
+    path
+      fill: $at-text-lt
+  p
+    display: inline-block
+
+.table-desc
+  height: 34px
+  display: flex
+  flex-direction: row
+  align-items: center
+  min-width: 140px
+  .table-check
+    label
+      position: relative
+      padding-left: 33px
+      color: $at-text
+      font-weight: 500
+      transition: $hover
+      cursor: pointer
+      &:before
+        content: ""
+        display: block
+        width: 18px
+        height: 18px
+        border-radius: 3px
+        background-color: #fefefe
+        border: solid 2px $at-border
+        position: absolute
+        top: -3px
+        left: 0
+      &:after
+        content: ""
+        display: block
+        width: 18px
+        height: 18px
+        border-radius: 3px
+        background: #e2f7f5 url('../img/icon-check.png')no-repeat center
+        background-size: 10px 8px
+        position: absolute
+        top: -3px
+        left: 0
+        transition: $hover
+        opacity: 0
+    input
+      margin: 0!important
+      display: none
+      visibility: hidden
+      &:checked
+        + label
+          color: $at-text-lt
+          text-decoration: line-through
+          &:after
+            opacity: 1
+  h4
+    margin-bottom: 0
+    font-size: 14px
+    font-weight: 500

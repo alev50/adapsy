@@ -1,0 +1,100 @@
+/* ////====== BUTTON STYLES =====//// */
+
+.btn
+  padding: 12px 30px
+  min-width: 120px
+  border: none!important
+  border-radius: $border-radius
+  font-size: 12px!important
+  transition: all .2s ease-in-out
+  font-weight: bold
+  text-transform: uppercase
+  color: #fefefe
+  @media (min-width:$screen-md-min)
+    min-width: 150px
+  &:hover,
+  &:focus,
+  &:active
+    color: #fefefe
+    outline: none
+  &:active
+    &:focus
+      outline: none
+  &.btn-default
+    background: #e4edf0
+    border: none
+    color: #b0bec5!important
+    &:hover,
+    &:focus,
+    &:active
+      background: darken(#e4edf0, 5%)!important
+      color: darken(#b0bec5, 5%)!important
+  &.btn-md
+    padding: 12px 30px
+    min-width: 160px
+    @media (min-width:$screen-sm-min)
+      padding: 14px 40px
+      min-width: 180px
+  &.btn-sm
+    padding: 8px 20px
+    min-width: 90px
+    font-size: 12px!important
+  &.btn-lg
+    padding: 14px 40px
+    min-width: 180px
+    @media (min-width:$screen-sm-min)
+      padding: 18px 40px
+      min-width: 200px
+      
+  &.btn-bld
+    font-weight: bold
+  &.btn-uc
+    text-transform: uppercase
+  &.btn-rnd
+    border-radius: 40px!important
+
+  //custom Buttons
+  &.btn-white
+    color: $at-text-drk
+    background: #fff
+    span
+      display: inline-block
+      color: $at-green
+      font-weight: bold
+      margin-left: 5px
+    &:hover,
+    &:focus,
+    &:active
+      color: $at-text-drk
+      background: #f4f4f4
+  &.btn-grdnt
+    color: #eff5f7
+    background-image: linear-gradient(45deg, #3bd0e2, #40eac6), linear-gradient($at-green, $at-green)
+    &:hover,
+    &:focus,
+    &:active
+      opacity: 0.7
+  &.btn-trans
+    background: transparent
+    border: none
+    color: #b0bec5!important
+    &:hover,
+    &:focus,
+    &:active
+      background: #e4edf0
+      color: #b0bec5!important
+  &.btn-drk
+    background: $text-drk
+    color: #fff!important
+    &:hover,
+    &:focus,
+    &:active
+      background: darken($text-drk, 5%)
+  &.btn-lt
+    background: $text-lt
+    color: #fff!important
+    &:hover,
+    &:focus,
+    &:active
+      background: darken($text-lt, 5%)
+ 

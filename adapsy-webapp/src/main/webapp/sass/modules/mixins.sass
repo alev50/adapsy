@@ -1,0 +1,102 @@
+// *////====== MIXINS =====//// *//
+
+=clearfix() 
+  &:before,
+  &:after
+    content: ""
+    display: table
+  &:after 
+    clear: both
+  
+=absolute-center()
+  margin: auto
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+=cover()
+  width: 100%
+  height: 100%
+  margin: auto
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+=center()
+  margin: auto
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+
+=v-center()
+  position: relative
+  top: 50%
+  -webkit-transform: translateY(-50%)
+  -ms-transform: translateY(-50%)
+  transform: translateY(-50%)
+
+=v-center-parent()
+  -webkit-transform-style: preserve-3d
+  -moz-transform-style: preserve-3d
+  transform-style: preserve-3d
+
+=img-center()
+  display: block
+  margin: 0 auto
+
+//Custom Buttons
+=thebtn($color)
+  background: $color
+  color: #fff
+  border: 1px solid darken($color, 7%)
+  &:hover
+    color: #fff!important
+    background: darken($color, 8%)
+    border: 1px solid darken($color, 12%)
+  &:focus,
+  &:active
+    background: darken($color, 10%)
+    border: 1px solid darken($color, 15%)
+    outline: none
+
+//Custom Buttons Flat
+=thebtn-flat($color)
+  background: $color
+  color: #fff!important
+  border: 1px solid $color
+  &:hover
+    color: #fff!important
+    background: darken($color, 7%)
+    border: 1px solid darken($color, 7%)
+  &:focus,
+  &:active
+    background: darken($color, 10%)
+    border: 1px solid darken($color, 10%)
+    outline: none
+
+//Custom Buttons Hollow
+=thebtn-hollow($color)
+  background: transparent
+  color: $color!important
+  border: 2px solid $color
+  &:hover
+    color: #fff!important
+    background: transparent
+    border: 2px solid darken($color, 7%)
+  &:focus,
+  &:active
+    background: transparent
+    border: 2px solid darken($color, 10%)
+    outline: none
+
+//Transition
+=transition($property, $sec)
+  -webkit-transition: $property $sec ease-in-out
+  -moz-transition: $property $sec ease-in-out
+  transition: $property $sec ease-in-out
