@@ -13,9 +13,9 @@ app.controller('societeController', function($scope, $http, $window, Endpoint, A
 	OAuthConfiguration.getConfig().protectedResources = [ '/contacts' ];
 	
 	var oauth = {	
-		site: 'https://adapsy.herokuapp.com',
+		site: 'https://adthurster.herokuapp.com',
 		clientId: 'myClient',
-		redirectUri: 'https://adapsy.herokuapp.com',
+		redirectUri: 'https://adthurster.herokuapp.com',
 		scope: 'read',
 		authorizePath: '/oauth/authorize',
 		tokenPath: '/oauth/token',
@@ -31,7 +31,7 @@ app.controller('societeController', function($scope, $http, $window, Endpoint, A
 	if (!$scope.logged) {
 		Endpoint.login();
 	} else {
-		$http.get('https://adapsy.herokuapp.com/contacts/1').then(function(response) {
+		$http.get('https://adthurster.herokuapp.com/contacts/1').then(function(response) {
 			$scope.contact = response.data;
 		});
 	}
