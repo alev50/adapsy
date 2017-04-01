@@ -34,7 +34,8 @@ drop table if exists liaison_reglement_facture_ligne;
 create table contact (
     id serial not null primary key,
     nom varchar(64),
-    prenom varchar(64)
+    prenom varchar(64),
+    profession varchar(64)
 );
 
 create table utilisateur (
