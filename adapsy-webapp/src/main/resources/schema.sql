@@ -1,6 +1,7 @@
 drop table if exists utilisateur_role;
 drop table if exists utilisateur;
 drop table if exists contact;
+drop table if exists contact_statut;
 drop table if exists adresse;
 drop table if exists pays;
 drop table if exists contact_fonction;
@@ -26,6 +27,7 @@ drop table if exists tarif_famille;
 drop table if exists tarif_type;
 drop table if exists tva;
 drop table if exists support;
+drop table if exists support_interet;
 drop table if exists emplacement;
 drop table if exists rubrique;
 drop table if exists support_type;
@@ -34,8 +36,8 @@ drop table if exists liaison_reglement_facture_ligne;
 create table contact (
     id serial not null primary key,
     nom varchar(64),
-    prenom varchar(64),
-    profession varchar(64)
+    prenom varchar(64)
+    
 );
 
 create table utilisateur (
@@ -57,6 +59,9 @@ create table adresse (
     adresse_3 varchar(45),
     cp varchar(45),
     ville varchar(45),
+    email varchar(45),
+    phone varchar(45),
+    fax varchar(45),
     ref_pays integer not null
 );
 
@@ -123,6 +128,10 @@ create table devis (
 );
 
 create table devis_statut (
+    id serial not null primary key,
+    libelle varchar(45) not null
+);
+create table contact_statut (
     id serial not null primary key,
     libelle varchar(45) not null
 );
@@ -195,6 +204,10 @@ create table support (
 );
 
 create table emplacement (
+    id serial not null primary key,
+    ref_support integer not null
+);
+create table support_interet (
     id serial not null primary key,
     ref_support integer not null
 );
