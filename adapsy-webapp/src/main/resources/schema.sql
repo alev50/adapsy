@@ -35,6 +35,9 @@ create table contact (
     id serial not null primary key,
     nom varchar(64),
     prenom varchar(64)
+    email varchar(255)
+    primary phone varchar(64)
+    secondary phone varchar(64)
 );
 
 create table utilisateur (
@@ -84,6 +87,7 @@ create table liaison_annonceur_groupe_annonceur (
 
 create table annonceur (
     id serial not null primary key,
+    email_annonceur varchar(255) not null unique,
     ref_contact integer not null
 );
 
