@@ -2,7 +2,7 @@ package com.adapsy.services;
 
 import java.util.List;
 
-import com.adapsy.model.Contact;
+import com.adthruster.model.Contact;
 
 public interface ContactService {
 	
